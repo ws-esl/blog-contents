@@ -16,7 +16,7 @@ async function main() {
       };
     })
   );
-  await fs.writeFile("./out.json", JSON.stringify(posts));
+  await fs.writeFile("./posts.json", JSON.stringify(posts));
 }
 
 main();
