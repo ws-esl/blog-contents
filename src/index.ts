@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import { promises as fs } from "fs";
-
+import markdownToHtml from "zenn-markdown-html";
 
 async function main() {
   const files = await fs.readdir("./posts");
@@ -12,7 +12,7 @@ async function main() {
       return {
         slug,
         data,
-        content,
+        content: markdownToHtml(content)
       };
     })
   );
