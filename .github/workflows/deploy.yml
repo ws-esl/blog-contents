@@ -18,8 +18,14 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: pnpm install
-      - name: Build
+      - name: Build code
         run: pnpm tsc
+      - name: Build
+        run: node dist/index.js && mkdir data && mv posts.json data
+      - name: Upload
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: data
   
   deploy:
     needs: build
