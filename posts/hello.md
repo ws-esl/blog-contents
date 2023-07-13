@@ -1,8 +1,9 @@
 ---
 title: こんにちは
 description: こんにちは
-author: test
+author: admin
 date: 2023/07/12
 ---
 # hello
-これはテストです。
+これはテスト用のブログページです。
+api万歳
